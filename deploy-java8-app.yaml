@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: java8-deployment
+spec:
+  selector:
+    matchLabels:
+      app: java8app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: java8app
+    spec:
+      containers:
+        - name: java8app
+          image: mcclayac/java8service9191:v0.0.4
+          ports:
+            - containerPort: 9191

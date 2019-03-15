@@ -1,0 +1,546 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2019-03-15T00:59:24Z",
+                "generateName": "goapp-deployment-67c4bfd48b-",
+                "labels": {
+                    "app": "goapp",
+                    "pod-template-hash": "67c4bfd48b"
+                },
+                "name": "goapp-deployment-67c4bfd48b-v8lj7",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "goapp-deployment-67c4bfd48b",
+                        "uid": "931e5570-46bd-11e9-89c2-080027bfc71f"
+                    }
+                ],
+                "resourceVersion": "111185",
+                "selfLink": "/api/v1/namespaces/default/pods/goapp-deployment-67c4bfd48b-v8lj7",
+                "uid": "93223d75-46bd-11e9-89c2-080027bfc71f"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "mcclayac/goservice9090:v0.0.3",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "goapp",
+                        "ports": [
+                            {
+                                "containerPort": 9090,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-pbvjv",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "minikube",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "default-token-pbvjv",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-pbvjv"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:24Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:26Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:26Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:24Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://a093948eb001c981c4deb59c373fa5bf55f94b21b88eba5d02c913c4d5ff846a",
+                        "image": "mcclayac/goservice9090:v0.0.3",
+                        "imageID": "docker-pullable://mcclayac/goservice9090@sha256:26bd71b13da28335013a1361bdbb6ab41a8db8a0278727140aa30f35588ee4b2",
+                        "lastState": {},
+                        "name": "goapp",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2019-03-15T00:59:25Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.0.2.15",
+                "phase": "Running",
+                "podIP": "172.17.0.9",
+                "qosClass": "BestEffort",
+                "startTime": "2019-03-15T00:59:24Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2019-03-15T00:59:24Z",
+                "generateName": "java8-deployment-674ff4c8c9-",
+                "labels": {
+                    "app": "java8app",
+                    "pod-template-hash": "674ff4c8c9"
+                },
+                "name": "java8-deployment-674ff4c8c9-gvrgq",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "java8-deployment-674ff4c8c9",
+                        "uid": "93235305-46bd-11e9-89c2-080027bfc71f"
+                    }
+                ],
+                "resourceVersion": "111176",
+                "selfLink": "/api/v1/namespaces/default/pods/java8-deployment-674ff4c8c9-gvrgq",
+                "uid": "9326112f-46bd-11e9-89c2-080027bfc71f"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "mcclayac/java8service9191:v0.0.4",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "java8app",
+                        "ports": [
+                            {
+                                "containerPort": 9191,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-pbvjv",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "minikube",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "default-token-pbvjv",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-pbvjv"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:24Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:25Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:25Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:24Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://e9f86d9d9b2dd708385bc4049a54fdc681d40d77420d1d1ac262f74563c3a1ae",
+                        "image": "mcclayac/java8service9191:v0.0.4",
+                        "imageID": "docker-pullable://mcclayac/java8service9191@sha256:d16634ae96298434357e5f55b3111103057ce88279c6e450ab2a981bff9f7358",
+                        "lastState": {},
+                        "name": "java8app",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2019-03-15T00:59:25Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.0.2.15",
+                "phase": "Running",
+                "podIP": "172.17.0.7",
+                "qosClass": "BestEffort",
+                "startTime": "2019-03-15T00:59:24Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2019-03-15T00:59:24Z",
+                "generateName": "pythonapp-deployment-5b564c9665-",
+                "labels": {
+                    "app": "pythonapp",
+                    "pod-template-hash": "5b564c9665"
+                },
+                "name": "pythonapp-deployment-5b564c9665-qdh6x",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "pythonapp-deployment-5b564c9665",
+                        "uid": "9328848d-46bd-11e9-89c2-080027bfc71f"
+                    }
+                ],
+                "resourceVersion": "111188",
+                "selfLink": "/api/v1/namespaces/default/pods/pythonapp-deployment-5b564c9665-qdh6x",
+                "uid": "932dcd15-46bd-11e9-89c2-080027bfc71f"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "mcclayac/pythonservice9292:v0.0.4",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "pythonapp",
+                        "ports": [
+                            {
+                                "containerPort": 9292,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-pbvjv",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "minikube",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "default-token-pbvjv",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-pbvjv"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:24Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:26Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:26Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:24Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://e0af40628760b0964e4af112811dbc1a722853d6c25a535237021b82a7a5198c",
+                        "image": "mcclayac/pythonservice9292:v0.0.4",
+                        "imageID": "docker-pullable://mcclayac/pythonservice9292@sha256:f80a1809921c71ce01a96f43095de68dc317dbf888f69f9fe95a771b55672efb",
+                        "lastState": {},
+                        "name": "pythonapp",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2019-03-15T00:59:25Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.0.2.15",
+                "phase": "Running",
+                "podIP": "172.17.0.8",
+                "qosClass": "BestEffort",
+                "startTime": "2019-03-15T00:59:24Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2019-03-15T00:59:24Z",
+                "generateName": "tomcat-deployment-5c4b9b9c99-",
+                "labels": {
+                    "app": "tomcat",
+                    "pod-template-hash": "5c4b9b9c99"
+                },
+                "name": "tomcat-deployment-5c4b9b9c99-bhd2j",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "tomcat-deployment-5c4b9b9c99",
+                        "uid": "931dd6ea-46bd-11e9-89c2-080027bfc71f"
+                    }
+                ],
+                "resourceVersion": "111182",
+                "selfLink": "/api/v1/namespaces/default/pods/tomcat-deployment-5c4b9b9c99-bhd2j",
+                "uid": "93201bb4-46bd-11e9-89c2-080027bfc71f"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "image": "tomcat:9.0",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "tomcat",
+                        "ports": [
+                            {
+                                "containerPort": 8080,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-pbvjv",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "minikube",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "default-token-pbvjv",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-pbvjv"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:24Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:26Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:26Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2019-03-15T00:59:24Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://3eb141c0af0dea25831a4430893202085ddbd695bc04e45292f3036f8ef6bea3",
+                        "image": "tomcat:9.0",
+                        "imageID": "docker-pullable://tomcat@sha256:3f4b2548996ffd6d7984f76557fc4db75f92e155340191f7a7325b1f751d10ac",
+                        "lastState": {},
+                        "name": "tomcat",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2019-03-15T00:59:25Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.0.2.15",
+                "phase": "Running",
+                "podIP": "172.17.0.6",
+                "qosClass": "BestEffort",
+                "startTime": "2019-03-15T00:59:24Z"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": "",
+        "selfLink": ""
+    }
+}

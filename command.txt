@@ -1,0 +1,33 @@
+
+
+#  Apply the yaml file
+kubectl apply -f ./deployment.yaml
+k8 apply -f ./deployment.yaml
+$ k8 apply -f ./deployment.yaml
+deployment.apps "tomcat-deployment" created
+
+$ k8 apply -f ./deploy-goapp.yaml
+deployment.apps "goapp-deployment" created
+
+
+#Expose the service
+$ k8 expose deployment tomcat-deployment --type=NodePort
+service "tomcat-deployment" exposed
+$ k8 expose deployment goapp-deployment --type=NodePort
+service "goapp-deployment" exposed
+
+
+#  View the running service
+$ minikube service tomcat-deployment --url
+http://192.168.99.100:30698
+$ minikube service goapp-deployment --url
+http://192.168.99.100:32418
+
+
+# Verify with curl command
+$ curl http://192.168.99.100:30698
+$ curl http://192.168.99.100:32418
+Hello World
+
+These Nutz
+
