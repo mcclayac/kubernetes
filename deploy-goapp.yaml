@@ -20,3 +20,4 @@ spec:
           image: mcclayac/goservice9090:v0.0.5
           ports:
             - containerPort: 9090
+
